@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global Styles with Glassmorphism Theme */
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+/* Glass effect utility classes */
+@layer components {
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-xl;
+  }
+  
+  .glass-card-green {
+    @apply bg-glass-green-light/20 backdrop-blur-lg border border-glass-green/30 rounded-2xl shadow-xl;
+  }
+  
+  .glass-card-purple {
+    @apply bg-glass-purple-light/20 backdrop-blur-lg border border-glass-purple/30 rounded-2xl shadow-xl;
+  }
+  
+  .glass-input {
+    @apply bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-4 py-2 text-white placeholder-white/60 focus:outline-none focus:border-white/40 focus:ring-2 focus:ring-white/20;
+  }
+  
+  .glass-button {
+    @apply bg-white/20 backdrop-blur-sm border border-white/30 rounded-lg px-6 py-2 text-white font-medium hover:bg-white/30 transition-all duration-200 shadow-lg hover:shadow-xl;
+  }
+  
+  .glass-button-primary {
+    @apply bg-glass-green/40 backdrop-blur-sm border border-glass-green/50 rounded-lg px-6 py-2 text-white font-medium hover:bg-glass-green/60 transition-all duration-200 shadow-lg hover:shadow-xl;
+  }
+  
+  .glass-button-danger {
+    @apply bg-red-400/40 backdrop-blur-sm border border-red-400/50 rounded-lg px-4 py-2 text-white font-medium hover:bg-red-400/60 transition-all duration-200 shadow-lg hover:shadow-xl;
+  }
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
