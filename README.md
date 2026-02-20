@@ -235,7 +235,7 @@ habit_tracker_full_stack/
 
 ## 🔒 Firestore Database Structure
 
-\`\`\`
+```text
 users (collection)
 └── {userId} (document)
     └── habits (subcollection)
@@ -244,7 +244,7 @@ users (collection)
             ├── description: string
             ├── createdAt: timestamp
             └── completions: array of date strings (YYYY-MM-DD)
-\`\`\`
+```
 
 ## 🛡️ Security
 
