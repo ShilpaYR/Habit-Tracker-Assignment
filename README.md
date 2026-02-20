@@ -191,41 +191,47 @@ Your app will be live at: `https://your-project-id.web.app`
 
 ## 📁 Project Structure
 
-\`\`\`
+```bash
 habit_tracker_full_stack/
 ├── src/
-│   ├── components/          # React components
-│   │   ├── HabitForm.jsx    # Create new habits
-│   │   ├── HabitCard.jsx    # Individual habit display
-│   │   ├── HabitList.jsx    # List of all habits
-│   │   ├── WeeklyStats.jsx  # Statistics display
-│   │   ├── MotivationCard.jsx # Motivation generator
-│   │   └── ProtectedRoute.jsx # Route protection
-│   ├── pages/               # Page components
-│   │   ├── Login.jsx        # Login page
-│   │   ├── Signup.jsx       # Signup page
-│   │   └── Dashboard.jsx    # Main dashboard
-│   ├── hooks/               # Custom React hooks
-│   │   └── useAuth.jsx      # Authentication hook
-│   ├── firebase/            # Firebase configuration
-│   │   ├── config.js        # Firebase initialization
-│   │   ├── auth.js          # Auth utilities
-│   │   └── habits.js        # Firestore CRUD
-│   ├── utils/               # Utility functions
-│   │   ├── statsCalculator.js   # Statistics logic
-│   │   └── motivationGenerator.js # Motivation logic
-│   ├── App.jsx              # Main app component
-│   ├── main.jsx             # Entry point
-│   └── index.css            # Global styles + Tailwind
-├── public/                  # Static assets
-├── firebase.json            # Firebase config
-├── firestore.rules          # Security rules
-├── .firebaserc              # Firebase project alias
-├── tailwind.config.js       # Tailwind configuration
-├── postcss.config.js        # PostCSS configuration
-├── vite.config.js           # Vite configuration
-└── package.json             # Dependencies
-\`\`\`
+│   ├── components/
+│   │   ├── HabitForm.jsx
+│   │   ├── HabitCard.jsx
+│   │   ├── HabitList.jsx
+│   │   ├── WeeklyStats.jsx
+│   │   ├── MotivationCard.jsx
+│   │   └── ProtectedRoute.jsx
+│   │
+│   ├── pages/
+│   │   ├── Login.jsx
+│   │   ├── Signup.jsx
+│   │   └── Dashboard.jsx
+│   │
+│   ├── hooks/
+│   │   └── useAuth.jsx
+│   │
+│   ├── firebase/
+│   │   ├── config.js
+│   │   ├── auth.js
+│   │   └── habits.js
+│   │
+│   ├── utils/
+│   │   ├── statsCalculator.js
+│   │   └── motivationGenerator.js
+│   │
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+│
+├── public/
+├── firebase.json
+├── firestore.rules
+├── .firebaserc
+├── tailwind.config.js
+├── postcss.config.js
+├── vite.config.js
+└── package.json
+```
 
 ## 🔒 Firestore Database Structure
 
