@@ -70,17 +70,17 @@ A beautiful, full-stack habit tracking web application built with React, Tailwin
 
 ### 1. Clone and Install Dependencies
 
-\`\`\`bash
+```bash
 cd habit_tracker_full_stack
 npm install
-\`\`\`
+```
 
 ### 2. Install Firebase CLI
 
-\`\`\`bash
+```bash
 npm install -g firebase-tools
 firebase login
-\`\`\`
+```
 
 ### 3. Create Firebase Project
 
@@ -103,7 +103,7 @@ Copy your Firebase configuration from Firebase Console:
 - Copy the config object
 
 Update `src/firebase/config.js`:
-\`\`\`javascript
+```javascript
 const firebaseConfig = {
   apiKey: "YOUR_API_KEY",
   authDomain: "YOUR_AUTH_DOMAIN",
@@ -112,31 +112,31 @@ const firebaseConfig = {
   messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
   appId: "YOUR_APP_ID"
 };
-\`\`\`
+```
 
 Update `.firebaserc`:
-\`\`\`json
+```json
 {
   "projects": {
     "default": "your-project-id"
   }
 }
-\`\`\`
+```
 
 ### 5. Deploy Firestore Rules
 
-\`\`\`bash
+```bash
 firebase deploy --only firestore:rules
-\`\`\`
+```
 
 ## 🧪 Local Development
 
 ### Option 1: Using Firebase Emulators (Recommended)
 
 1. Start Firebase Emulators:
-\`\`\`bash
+```bash
 firebase emulators:start
-\`\`\`
+```
 
 This will start:
 - Auth Emulator: http://localhost:9099
@@ -144,9 +144,9 @@ This will start:
 - Emulator UI: http://localhost:4000
 
 2. In a new terminal, start the dev server:
-\`\`\`bash
+```bash
 npm run dev
-\`\`\`
+```
 
 3. Open http://localhost:5173
 
@@ -155,9 +155,9 @@ The app will automatically connect to emulators when running on localhost!
 ### Option 2: Using Production Firebase
 
 Simply run:
-\`\`\`bash
+```bash
 npm run dev
-\`\`\`
+```
 
 Open http://localhost:5173
 
@@ -165,23 +165,23 @@ Open http://localhost:5173
 
 ### Build the Application
 
-\`\`\`bash
+```bash
 npm run build
-\`\`\`
+```
 
 This creates an optimized production build in the `dist` folder.
 
 ### Preview Production Build Locally
 
-\`\`\`bash
+```bash
 npm run preview
-\`\`\`
+```
 
 ### Deploy to Firebase Hosting
 
-\`\`\`bash
+```bash
 firebase deploy
-\`\`\`
+```
 
 This deploys:
 - Firestore security rules
@@ -258,7 +258,7 @@ users (collection)
 ### Colors
 
 Edit `tailwind.config.js` to customize the color scheme:
-\`\`\`javascript
+```javascript
 colors: {
   'glass-green': {
     light: '#d1fae5',
@@ -271,16 +271,16 @@ colors: {
     dark: '#c4b5fd',
   },
 }
-\`\`\`
+```
 
 ### Glassmorphism Effects
 
 Edit `src/index.css` to customize glass effects:
-\`\`\`css
+```css
 .glass-card {
   @apply bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-xl;
 }
-\`\`\`
+```
 
 ## 🐛 Troubleshooting
 
@@ -294,18 +294,18 @@ If the app doesn't connect to emulators:
 ### Build Errors
 
 If npm install fails:
-\`\`\`bash
+```bash
 rm -rf node_modules package-lock.json
 npm install
-\`\`\`
+```
 
 ### Firebase Deployment Issues
 
 Make sure you're logged in and have the correct project selected:
-\`\`\`bash
+```bash
 firebase login
 firebase use --add
-\`\`\`
+```
 
 ## 📄 License
 
